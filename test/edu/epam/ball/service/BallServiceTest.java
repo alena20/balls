@@ -1,13 +1,13 @@
-package edu.epam.ball.entity;
+package edu.epam.ball.service;
 
+import edu.epam.ball.entity.Ball;
+import edu.epam.ball.entity.Basket;
+import edu.epam.ball.entity.Color;
 import edu.epam.ball.exception.BallException;
-import edu.epam.ball.service.BallService;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.*;
-
-public class BasketTest {
+public class BallServiceTest {
     @Test
     public void countWeight() throws BallException {
         Basket basket = new Basket();
