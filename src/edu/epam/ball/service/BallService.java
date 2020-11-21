@@ -5,9 +5,8 @@ import edu.epam.ball.entity.Basket;
 import edu.epam.ball.entity.Color;
 
 public class BallService {
-    public int getColorCount(Color color)
+    public int getColorCount(Color color, Basket balls)
     {
-        Basket balls = new Basket();
         int numOfBalls = 0;
         for (Ball ball: balls.getBalls())
         {
@@ -17,8 +16,7 @@ public class BallService {
         return numOfBalls;
     }
 
-    public double getWeightCount(){
-        Basket balls = new Basket();
+    public double getWeightCount(Basket balls){
         double weight = 0;
         for (Ball ball: balls.getBalls())
         {

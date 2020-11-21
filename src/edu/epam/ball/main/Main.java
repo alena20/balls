@@ -12,14 +12,9 @@ import java.util.Scanner;
 public class Main
 {
     public static void main(String[] args) throws Exception {
-
-        int a = 1;
-        Integer b = null;
-        int c = a+b;
-        System.out.println(c);
         try {
             Basket basket = new Basket();
-            FileReader read = new FileReader("..\\task2Book\\balls.txt");
+            FileReader read = new FileReader("..\\balls\\balls.txt");
             Scanner scan = new Scanner(read);
             while (scan.hasNextLine()) {
                 String[] split;
@@ -31,8 +26,8 @@ public class Main
             read.close();
             Color colorCount = Color.BLUE;
             BallService service = new BallService();
-            int count = service.getColorCount(colorCount);
-            double weight = service.getWeightCount();
+            int count = service.getColorCount(colorCount, basket);
+            double weight = service.getWeightCount(basket);
             BallReport report = new BallReport();
             report.printReport(basket.getBalls(), count, weight, colorCount);
         }

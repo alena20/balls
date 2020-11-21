@@ -18,7 +18,7 @@ public class BallReport {
             sb.append("Color: " + ball.getColor()  + " weight: " + ball.getWeight()+"\r\n");
         }
         sb.append("\r\n"+count+" "+color+" balls in basket and they weigh " + weightStr+" kg");
-        FileWriter writer = new FileWriter("..\\task2Book\\basket.txt");
+        FileWriter writer = new FileWriter("..\\balls\\basket.txt");
         writer.write(sb.toString());
         writer.close();
     }

@@ -1,3 +1,11 @@
 Balls inside the basket: 
-Color: BLUE weight: 0.2Color: BLACK weight: 0.3Color: RED weight: 0.1Color: BLUE weight: 0.2
-2 BLUE balls in basket and they weigh 0.8 kg
+Color: BLUE weight: 0.2
+Color: BLACK weight: 0.3
+Color: RED weight: 0.1
+Color: BLUE weight: 0.2
+Color: BLUE weight: 0.4
+Color: WHITE weight: 0.7
+Color: YELLOW weight: 0.4
+Color: BLUE weight: 0.5
+
+4 BLUE balls in basket and they weigh 2,8 kg

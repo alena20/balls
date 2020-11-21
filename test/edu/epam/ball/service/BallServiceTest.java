@@ -16,7 +16,7 @@ public class BallServiceTest {
         basket.add(new Ball(Color.BLACK, 0.3));
         basket.add( new Ball(Color.RED, 0.1));
         basket.add(new Ball(Color.BLUE, 0.2));
-        double weight = service.getWeightCount();
+        double weight = service.getWeightCount(basket);
         double expected = 0.8;
         Assert.assertEquals(weight,expected);
     }
@@ -29,7 +29,7 @@ public class BallServiceTest {
         basket.add(new Ball(Color.BLACK, 0.3));
         basket.add( new Ball(Color.RED, 0.1));
         basket.add(new Ball(Color.BLUE, 0.2));
-        int colorCount = service.getColorCount(Color.BLUE);
+        int colorCount = service.getColorCount(Color.BLUE, basket);
         int excpected = 2;
         Assert.assertEquals(colorCount,excpected);
     }
