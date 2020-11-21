@@ -3,6 +3,7 @@ package edu.epam.ball.entity;
 import edu.epam.ball.exception.BallException;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Basket {
     private ArrayList<Ball> balls;
@@ -15,34 +16,32 @@ public class Basket {
         return balls;
     }
 
-    public void add(Ball ball)
+    public void add(Ball ball) throws BallException
     {
         if (ball == null)
-            try {
                 throw new BallException("No ball info to add");
-            } catch (BallException e) {
-                e.printStackTrace();
-            }
         this.balls.add(ball);
     }
 
-    public int getColorCount(Color color)
-    {
-        int numOfBalls = 0;
-        for (Ball ball: balls)
-        {
-            if (ball.getColor() == color)
-                numOfBalls++;
-        }
-        return numOfBalls;
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Basket{");
+        sb.append("balls=").append(balls);
+        sb.append('}');
+        return sb.toString();
     }
 
-    public double getWeightCount(){
-        double weight = 0;
-        for (Ball ball: balls)
-        {
-            weight +=ball.getWeight();
-        }
-        return weight;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Basket basket = (Basket) o;
+        return Objects.equals(balls, basket.balls);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(balls);
     }
 }
